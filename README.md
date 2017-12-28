@@ -8,6 +8,6 @@
 - Node.js 9
 - Yarn
 
-#Vagrant Plugins
+# Vagrant Plugins
 
 - [vagrant-hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater)
