@@ -1,0 +1,5 @@
+/.vagrant/
+/share/db/*
+/share/sites/*
+!/share/db/.gitkeep
+!/share/sites/.gitkeep
