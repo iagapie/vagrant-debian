@@ -71,9 +71,13 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision :shell, :path => "shell/run.sh"
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
-  #   apt-get install -y apache2
-  # SHELL
+  config.vm.provision :shell, :path => "shell/run.sh", :env => {
+    "DOMAIN_ALIASES" => "www.debian.test",
+    "USER" => "vagrant",
+    "GROUP" => "vagrant",
+    "DB_ROOT_PASSWD" => "061185",
+    "DB_USER" => "root",
+    "DB_PASSWD" => "061185",
+    "TIMEZONE" => "Europe/Rome"
+  }
 end

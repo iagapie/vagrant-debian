@@ -20,7 +20,7 @@ echo 'Listen 80
 # sed -i 's/User ${APACHE_RUN_USER}/User '${USER}'/' /etc/apache2/apache2.conf
 # sed -i 's/Group ${APACHE_RUN_GROUP}/Group '${GROUP}'/' /etc/apache2/apache2.conf
 
-cat $CONFIG_PATH/apache/vhost.conf > /etc/apache2/sites-available/${APP_DOMAIN}.conf
-a2ensite ${APP_DOMAIN}.conf >> $LOG_FILE 2>&1
+cat $CONFIG_PATH/apache/vhost.conf > /etc/apache2/sites-available/default.conf
+a2ensite default.conf >> $LOG_FILE 2>&1
 
 service apache2 restart >> $LOG_FILE 2>&1

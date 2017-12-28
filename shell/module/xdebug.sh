@@ -2,11 +2,6 @@
 
 # PHP Xdebug
 
-XDEBUG_VERSIONS=(
-    2.5.5
-    2.6.0alpha1
-)
-
 XDEBUG_URL='https://xdebug.org/files/'
 
 SRC='/usr/local/src/'

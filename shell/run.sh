@@ -7,19 +7,16 @@ LOG_FILE='/vagrant/vm_build.log'
 MODULE_PATH='/vagrant/shell/module'
 CONFIG_PATH='/vagrant/shell/config'
 
-# IP for the vagrant VM
-GUEST_IP='192.168.33.33'
-
-USER='vagrant'
-GROUP='vagrant'
+# USER='vagrant'
+# GROUP='vagrant'
 
 #Config
-APP_DOMAIN='debian.test'
-ALIAS_DOMAIN='www.debian.test'
+# DOMAIN_ALIASES='www.debian.test'
 
-DB_ROOT_PASSWD='061185'
-DB_USER='root'
-DB_PASSWD='061185'
+# DB_ROOT_PASSWD='061185'
+
+# DB_USER='root'
+# DB_PASSWD='061185'
 
 PHP_VERSIONS=(
     5.5
@@ -29,7 +26,10 @@ PHP_VERSIONS=(
     7.2
 )
 
-#DEFAULT_PHP=${PHP_VERSIONS[-1]}
+XDEBUG_VERSIONS=(
+    2.5.5
+    2.6.0alpha1
+)
 
 # Adding an entry here executes the corresponding .sh file in MODULE_PATH
 DEPENDENCIES=(
